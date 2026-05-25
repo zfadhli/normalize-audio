@@ -55,7 +55,7 @@ program
         const withStats: FileWithStat[] = await Promise.all(
           files.map(async (f) => {
             const s = await stat(f).catch(() => null);
-            return { path: f, birthtimeMs: s?.birthtimeMs ?? s?.mtimeMs ?? 0 };
+            return { path: f, birthtimeMs: s?.mtimeMs ?? s?.birthtimeMs ?? 0 };
           }),
         );
         withStats.sort((a, b) => a.birthtimeMs - b.birthtimeMs);
