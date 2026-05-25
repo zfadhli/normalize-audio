@@ -1,0 +1,23 @@
+{
+  "name": "normalize-audio",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "normalize-audio": "src/index.ts"
+  },
+  "scripts": {
+    "lint": "biome check",
+    "lint:fix": "biome check --write --unsafe",
+    "format": "biome format --write",
+    "format:check": "biome format",
+    "typecheck": "bun run --check src/index.ts"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "ora": "^8.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
+    "@types/bun": "latest"
+  }
+}

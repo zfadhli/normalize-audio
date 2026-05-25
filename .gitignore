@@ -1,0 +1,8 @@
+node_modules/
+
+# video output / backup files
+*_normalize.*
+
+# OS junk
+.DS_Store
+Thumbs.db
